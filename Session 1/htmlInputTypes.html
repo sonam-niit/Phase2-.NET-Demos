@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!-- CSS -->
+        <style>
+            .myForm{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 0.8em;
+                width: 20em;
+                padding: 1em;
+                border: 1px solid #ccc;
+            }
+            .myForm *
+            {
+                box-sizing: border-box;
+            }
+            <!-- ID Selector-->
+            #t{
+                box-sizing: content-box;
+            }
+            .myForm fieldset
+            {
+                border: none;
+                padding: 0;
+            }
+            .myForm legend,myForm label{
+                    padding: 0;
+                    font-weight:bold;
+                }
+            .myForm label.choice
+            {
+                font-size: 0.9em;
+                font-weight: normal;
+            }
+            .myForm input[type="text"],
+            .myForm input[type="number"],
+            .myForm input[type="email"],
+            .myForm input[type="datetime-local"],
+            .myForm select, .myForm textarea
+            {
+                display: block;
+                width: 100%;
+                border:  1px solid #ccc;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 0.9em;
+                padding: 0.3 em;
+            }
+            .myForm textarea
+            {
+                height: 100px;
+            }
+            .myForm button{
+                color: aqua;
+                padding: 1em;
+                border-radius: 0.5em;
+                background: #eee;
+                border:none;
+                font-weight: bold;
+                margin-top: 1em;
+            }  
+            .myForm button:hover{
+                background: #ccc;
+                cursor: pointer;
+            }
+        </style>
+    </head>   
+
+        <body>
+            <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="register.php">
+            
+                <p>
+                    <label>Name:
+                    <input type="text" name="cust_name" required>
+                    </label>
+                </p>
+                <p>
+                    <label>Phone:
+                    <input type="number" name="cust_phone_number" required>
+                    </label>
+                </p>
+                <p>
+                    <label>Email:
+                    <input type="email" name="cust_email_Id" required>
+                    </label>
+                </p>
+                <fieldset>
+                    <legend>Which taxi do you require?</legend>
+                    <p>
+                        <label class="choice">
+                        <input type="radio" name="taxi" required value="car">Car
+                        </label>
+                    </p>
+                    <p>
+                        <label class="choice">
+                        <input type="radio" name="taxi" required value="van">Van
+                        </label>
+                    </p>
+                    <p>
+                        <label class="choice">
+                        <input type="radio" name="taxi" required value="tuktuk">tuktuk
+                        </label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Extras</legend>
+                    <p>
+                        <label>
+                        <input type="checkbox" name="extras" value="baby">Baby Seat
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                        <input type="checkbox" name="extras"  value="wheel chair">Wheelchair Access
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                        <input type="checkbox" name="extras"  value="tip">stock tip
+                        </label>
+                    </p>
+                </fieldset>
+                <p>
+                    <label style="text-transform: uppercase;">Pick up date:
+                    <input type="datetime-local" name="pickup_time"  required>
+                    </label>
+                </p>
+                <p id="t">
+                    <label>Pick up Place:
+                    <select id="pickup_place" name="pickup_place">
+                        <option value="" selected="selected">Select Any One</option>
+                        <option value="office">taxi office</option>
+                        <option value="town_hall">town Hall</option>
+                        <option value="telepathy">We will guess!</option>
+                    </select>
+                    </label>
+                </p>
+                <p>
+                    <label>Dropoff Place:
+                    <input type="text" name="dropoff"  required list="destination">
+                    </label>
+                    <datalist id="destination">
+                        <option value="Airport"></option>
+                        <option value="Beach"></option>
+                        <option value="Station"></option>
+                    </datalist>
+                </p>
+                 <p>
+                     <label>Special Instructions
+                     <textarea name="comments" maxlength="500"></textarea>
+                    </label>
+                 </p>
+                 <p><button>Submit Booking</button></p>
+            </form>
+        </body>
+
+    
+</html>
