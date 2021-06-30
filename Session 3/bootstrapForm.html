@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-4" mb-3>
+                    <label for="validation01">First Name</label>
+                    <input type="text" class="form-control" id="validation01" placeholder="Enter First Name Here" required>
+                    <div class="valid-feedback">
+                        Looks fine!
+                    </div>
+                </div>
+                <div class="col-md-4" mb-3>
+                    <label for="validation02">Last Name</label>
+                    <input type="text" class="form-control" id="validation02" placeholder="Enter Last Name Here" required>
+                    <div class="valid-feedback">
+                        Looks fine!
+                    </div>
+                </div>
+                <div class="col-md-4" mb-3>
+                    <label for="validation03">User Name</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="validation03" placeholder="Enter User Name Here" 
+                        aria-describedby="inputGroupPrepend" required>
+                    </div>
+                    
+                    <div class="invalid-feedback">
+                        Please choose a proper username
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6" mb-3>
+                    <label for="validation04">City</label>
+                    <input type="text" class="form-control" id="validation04" placeholder="Enter City Here" required>
+                    <div class="invalid-feedback">
+                        Kindly provide a valid city name
+                    </div>
+                </div>
+                <div class="col-md-3" mb-3>
+                    <label for="validation05">State</label>
+                    <input type="text" class="form-control" id="validation05" placeholder="Enter state Here" required>
+                    <div class="invalid-feedback">
+                        Kindly provide a valid state name
+                    </div>
+                </div>
+                <div class="col-md-3" mb-3>
+                    <label for="validation06">Zip</label>
+                    <input type="text" class="form-control" id="validation06" placeholder="Enter Zip Here" required>
+                    <div class="invalid-feedback">
+                        Kindly provide a valid Zip name
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" mb-3>
+                <label for="disabledInput">Topics which I like to read</label>
+                <input class="form-control" id="disabledInput" type="text" placeholder="web development" disabled>
+            </div>
+            <p>Where did you find Us?</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inline01" value="option 1">
+                <label class="form-check-label" for="inline01">Facebook</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inline02" value="option 2">
+                <label class="form-check-label" for="inline02">google</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inline03" value="option 3">
+                <label class="form-check-label" for="inline03">Linked In</label>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidcheck" required>
+                    <label class="form-check-label" for="invalidcheck">Agree to tearms and Conditions</label>
+                 </div>
+                 <div class="invalid-feedback">
+                     you must agree before submitting this form
+                 </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit Form</button>
+        </form>
+
+        <!-- JAVASCRIPT code-->
+        <script>
+
+           ( function()
+            {
+                'use strict';
+                window.addEventListener('load',function(){
+                    var forms=document.getElementsByClassName('needs-validation');
+                    var validation= Array.prototype.filter.call(forms,function(form){
+                        form.addEventListener('submit',function(event){
+                            if(form.checkValidity()===false){
+                                event.preventDefault();
+                                event.stopPropogation();
+                            }
+                            form.classList.add('was-validated');
+                        },false)
+                    });
+                },false);
+            })();
+        </script>
+    </body>
+</html>
