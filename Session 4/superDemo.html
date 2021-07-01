@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Super Demo</h1>
+        <p id="result"></p>
+        <script lang="javascript">
+            //Inheritance with super
+            class Parent{
+                constructor(address)
+                {
+                    this.address=address;
+                }
+                display()
+                {
+                    return 'My address is '+this.address;
+                }
+            }
+            class Child extends Parent
+            {
+                constructor(address,phone)
+                {
+                    super(address);
+                    this.phone=phone;
+                }
+                show()
+                {
+                    return this.display()+"<br> My Phone is "+this.phone
+                }
+            }
+
+            user=new Child("Mumbai","3456789");
+            document.getElementById("result").innerHTML=user.show();
+        </script>
+    </body>
+</html>
