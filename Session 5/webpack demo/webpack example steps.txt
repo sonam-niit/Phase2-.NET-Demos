@@ -1,0 +1,24 @@
+installed node
+
+to check wether installed properly or not execute node --version command
+
+then install Yarn:  npm i yarn -g
+
+move to the perticular directory: E:
+
+make new directory: mkdir webpack (folder created)
+
+move to that directory: cd webpack
+
+to initilize yarn:  npm init -y (it will create package.json file in that)
+--> to pull webpack
+yarn add --dev webpack webpack-dev-server (node_module folder with bunch of files in that)
+
+--> include cli--> yarn add webpack webpack-cli --dev
+
+edited package.json file: ,
+  "scripts":{"build":"webpack"}--> saved
+
+folder: src---> calculate.js, index.js
+
+run-->   npm run build (create dist folder with main.js file)
