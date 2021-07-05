@@ -1,0 +1,46 @@
+create folder named babelDemo
+
+create index.html file inside that
+
+create public folder and app.js file in same.-->public folder-->app.js
+
+install babel: npm install -g babel-cli@6.24.1
+
+--> you can run babel -help command to see babel options
+-------------------------------------------------------------
+go to the folder where you want to use babel 
+
+1. initialize yarn in that folder--> yarn init
+2. leave all options as default by clicking on enter button
+3. install babel preset:  yarn add babel-preset-es2015 babel-preset-env@1.5.2
+
+create src folder--> app.js file--> write below mention code in app.js file
+--------------------------------------------------------------------------------
+//JSX code
+
+let sum=(a,b)=>{console.log(a+b);}
+
+let multiply=(a,b)=>{console.log(a*b);}
+
+
+sum(3,5);
+multiply(10,20);
+==============================================================
+run below command in terminal
+--> babel src/app.js --out-file=public/script/app.js --presets=env,es2015 -watch
+
+open another terminal
+----------------------------
+move to the babeldemo folder: run below mentioned command
+
+cd src 
+node app.js
+
+----------------------------------------------------
+you will able to see output
+
+8
+200
+======================================================================
+I have removed node_modules folder before uploading on git hub
+ when you initiate yarn in your folder it create the same  with yarn.lock file and package.json file

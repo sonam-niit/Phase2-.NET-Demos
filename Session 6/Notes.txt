@@ -1,0 +1,19 @@
+while running getters and setters if you are getting an error like Accessors are only available when targeting ESMA script 5 and Higher then
+
+compile the file using following command
+
+tsc --target ES5 filename (compile the code successfully)
+
+==============================================================
+
+while using namespace include namespace using below tag
+
+/// <reference path="Validation.ts" />
+
+when you are spliting multiple namespace on diffrent files to merge then execute below mentioned command
+----tsc --outFile sample.js Test.ts
+
+it will compile the code in sample.js
+
+to run the same execute this command: node sample.js
+
