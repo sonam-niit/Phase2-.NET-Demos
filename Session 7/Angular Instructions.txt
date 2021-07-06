@@ -1,0 +1,43 @@
+Install Angular: npm install -g @angular/cli
+
+To check its installed properly or not: execute: ng --version
+
+create new App: ng new my-app (my-app is app name)
+
+Run the app: cd my-app
+	     ng serve --open
+
+create new component: ng generate component <component-name>
+
+when yopu execute this command 1 folder created in App folder
+4 files create in newely created folder
+
+eg. ng generate component product-list
+
+It creates--> product-list folder in app folder
+--> havind 4 file 1.product-list.component.ts
+		  2.product-list.component.css
+		  3.product-list.component.html
+		  4.product-list.component.spec.ts
+
+Automatically component added into app.module.ts
+---------------------------------------------------------------------------
+
+to add HTML content we edited product-list.component.html
+
+<h1>My first Component</h1>
+
+to display this component in my root component
+
+put <app-product-list></app-product-list> into your app.component.html file-->check output
+-----------------------------------------------------------------------------
+
+if you want to make your created component as root component
+
+open app.component.ts
+
+ // templateUrl: './app.component.html',
+ template: `<app-product-list><app-product-list>`,
+
+save and see output
+------------------------------------------------------------

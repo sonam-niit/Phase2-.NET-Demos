@@ -1,6 +1,6 @@
 class Example
 {
-    private _fname:string;
+    private _fname:string;//use prefix before variable name
 
     //get always return a value
     get fname():string{

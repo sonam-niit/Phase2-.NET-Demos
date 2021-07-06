@@ -1,0 +1,30 @@
+<h1> This is my Product List Page</h1>
+
+<p>Property Binding</p><span [innerHTML]="title"></span>
+<br>
+<p>Interpolation</p>
+<span>{{title}}</span>
+
+<img [src]="imageUrl" [title]="title" alt="{{title}}" *ngIf='showImage' [style.width.px]='width' [style.height.px]='height'/> <br>
+<button [attr.disabled]="true" class="btn btn-primary" (click)='toggleImage()'>This is myDisabled Button</button>
+<br>
+<button class="btn btn-primary" (click)='toggleImage()'>Show Image</button>
+<br><br>
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td [style.color]="'red'" [style.font-weight]="700">Product 1</td>
+        <td [class.inStock]="true" [style.color]="price1>20?'red':'blue'">{{price1}}</td>
+    </tr>
+    <tr>
+        <td>Product 1</td>
+        <td [class.inStock]="true" [style.color]="price2>20?'red':'blue'">{{price2}}</td>
+    </tr>
+    <tr>
+        <td>Product 1</td>
+        <td [class.inStock]="false" [style.color]="price3>20?'red':'blue'">{{price3}}</td>
+    </tr>
+</table>
