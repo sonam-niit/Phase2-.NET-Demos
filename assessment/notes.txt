@@ -1,0 +1,36 @@
+E commerce Portal: Kitchen Story
+----------------------------------------------
+create Json file as temp database, take mongo db as database
+
+collection: basic food Items:
+itemname, description, price,quantity --> add default values later on admin can insert more
+
+collection: user login: user name,email,phone,password
+
+you can create single user collection and take one property role="admin" --> admin user
+
+if role=="user"---> regular user (By default)
+===========================================================================================
+
+create Angular App:
+
+App component: display header, footer,basic info of website
+
+Routing: register, login, products,productdetail,cart
+
+4 components: register, login, products,cart
+--------------------------------------------------------
+products: show default products and give search lable with text field
+
+if user will click on search lable---call method which is available in service and load the data
+
+display on same products
+
+========================================================================================
+create array like selectedProducts[]={}
+
+if user selects products and add them in array or you can create Map("itemname","quantity")
+
+display all the items with total
+=================================================
+if user clicks on confirm button then you can confirm the order

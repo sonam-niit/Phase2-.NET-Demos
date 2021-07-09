@@ -1,0 +1,36 @@
+Install Node Js
+
+if already installed check node and npm version with following command
+
+node -v and npm -v
+
+===========================================================================
+jasmine install: npm install -g jasmine
+
+after that move to the perticular folder
+
+-----------------------------------------------
+E:
+md "Session 10"
+cd "Session 10"
+md test
+cd test
+npm init --yes
+jasmine init
+==================================================
+check the folder test must have package.json file and Spec folder
+
+edit package.json file
+
+replace line test: "echo \"Error: no test specified\" && exit 1"
+
+to
+
+"test": "jasmine"---> save and execute below command
+
+npm test
+
+you will get the message like 
+
+jasmine and then yopu can see no specs found
+

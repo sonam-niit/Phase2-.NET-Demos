@@ -1,0 +1,22 @@
+Use Jasmine to test Source Code
+--------------------------------------
+
+create folder jasmine-nodejs and move to that directory
+
+md jasmine-nodejs
+cd jasmine-nodejs
+
+npm init --yes
+
+npm install jasmine --save-dev
+
+===========================================
+edit package.json file
+
+"test-init": "jasmine init",
+    "test": "jasmine"
+
+save the file and execute
+
+npm run test-init ----> initialize jasmine test case
+====================================================================
