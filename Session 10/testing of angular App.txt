@@ -1,0 +1,30 @@
+Use Jasmine to Test Angular App:
+--------------------------------------------
+
+1. create Angular Application: ng new app-test
+
+2.use npm install ng -g to connect with virtual machine ton test app
+
+3. transfer your application to perticular location, here we are installing ng globally so you can access the same from any location of your machine.
+
+4. go to your angular app location
+
+5. run npm install command
+
+6. run: npm run build: it will create dist folder
+
+7. move to dist folder (cd dist) then execute test case: ng test
+
+8: you can see the success and failure of test case result in cmd as well as in your default browser. 
+
+
+Test Angular Application using Jasmine:
+================================================
+create angular app: ng new app-test
+
+move to the app directory: cd app-test
+
+execute: ng test
+
+-----------------------------------------------
+will execute all test cases written in spec files. you can see app component test cases in app.component.spec.ts file.
